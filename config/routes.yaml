@@ -1,0 +1,49 @@
+inicio:
+    path: /
+    controller: App\Controller\IndexController::index
+
+empresas:
+    path: /empresas{error}
+    controller: App\Controller\EmpresaController::listado
+    defaults:
+        error: 0
+    
+sectores:
+    path: /sectores/{error}
+    controller: App\Controller\SectorController::listadoSectores
+    defaults:
+        error: 0
+    
+empresa_nueva:
+    path: /nuevaempresa
+    controller: App\Controller\EmpresaController::NuevaEmpresa 
+    
+empresa_borrar:
+    path: /borrarempresa/{id}
+    controller: App\Controller\EmpresaController::delete
+
+empresa_editar:
+    path: /editarempresa/{id}
+    controller: App\Controller\EmpresaController::edit    
+    
+    
+    
+sector_nuevo:
+    path: /nuevosector
+    controller: App\Controller\SectorController::NuevoSector
+    
+sector_borrar:
+    path: /borrarsector/{id}
+    controller: App\Controller\SectorController::delete
+
+sector_editar:
+    path: /editarsector/{id}
+    controller: App\Controller\SectorController::edit     
+    
+    
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+    
+app_logout:
+    path: /logout

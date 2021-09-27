@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    {% if sectores %}
+      
+        <label for="empresa_Sector">Sector</label>
+      <select name="empresa[Sector]"  id="empresa_Sector" class="form-control">
+     {% for sector in sectores %}
+         <option value='{{ sector.id }}'>{{ sector.nombre }}</option>
+         
+     {% endfor %}
+     
+     </select>
+    {% endif %}
+    
+   <center> <button class="btn boton_borrar">{{ button_label|default('Guardar') }}</button></center>
+{{ form_end(form) }}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Sector{% endblock %}
+
+{% block body %}
+    <h1>Editar Sector</h1>
+
+    {{ include('sector/_form.html.twig', {'button_label': 'Update'}) }}
+
+     
+
+    
+      <a class= 'boton_borrar' href="{{ path('sectores') }}">back to list</a>
+{% endblock %}

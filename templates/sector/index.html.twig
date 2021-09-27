@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listado Empresa {% endblock %}
+{% block javascript %}
+  <script type="text/javascript">
+    
+    $(document).ready(function(){  
+        alert('hola');
+  //Código que se ejecutará al cargar la página
+   )};
+        
+        
+    
+</script>   
+
+
+{% endblock %}
+ 
+
+{% block body %}
+    <center><h3>Listado Sectores</h3></center> 
+   
+
+    {% if error == 0  %}
+        Registro borrado satisfactoriamente
+    {% elseif error == 1 %}
+        No se puede borrar el resgistro porque está asociado a una o más empresas
+     {% elseif error == 3 %}
+     No se ha podido agregar el sector porque ya existe uno con ese nombre
+      {% elseif error == 7  %}
+        Registro Insertado satisfactoriamente
+          {%elseif error == 8  %}
+        Registro actualizado satisfactoriamente
+    {%  else %}
+         Se ha produccido un error no se ha podido actualizar, isertar o borrar el sector
+   {% endif %}
+    
+  <div class="table-responsive" >
+    <table class="records_list table table-striped table-bordered table-hover" i>
+        <thead>
+            <tr>
+              
+                <th>Nombre</th>
+               <th>actiones</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sector in sectores %}
+            <tr>
+             
+                <td>{{ sector.Nombre }}</td>
+               
+                <td>
+                    <a class="boton_crear"href="{{ path('sector_borrar', {'id': sector.id}) }}"> <span class="boton_borrar" style="text-size:10px;">x</span></a>
+                    <a class="boton_crear" href="{{ path('sector_editar', {'id': sector.id}) }}"> <span class="boton_editar" style="text-size:10px;">Editar</span></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr >
+                <td colspan="6">No se han encontrado sectores</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <center><a class="boton_crear" href="{{ path('sector_nuevo') }}">Nuevo Sector</a> <a class="boton_crear" href="{{ path('inicio') }}">Volver</a></center>
+</div>
+{% endblock %}

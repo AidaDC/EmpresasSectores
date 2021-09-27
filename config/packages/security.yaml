@@ -1,0 +1,28 @@
+# config/packages/security.yaml
+security:
+    enable_authenticator_manager: true
+   
+    password_hashers:
+        App\Entity\User:
+            algorithm: auto
+   
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+          lazy: true
+          custom_authenticator: App\Security\LoginFormAuthenticator
+          logout:
+             path: app_logout
+
+            
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+   
+           
+     

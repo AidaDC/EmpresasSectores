@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listado Empresa {% endblock %}
+{% block javascript %}
+  <script type="text/Javascript">
+    
+    $(document).ready(function(){ 
+        alert('hola');
+  //Código que se ejecutará al cargar la página
+   )};
+        
+        
+    
+</script>   
+
+
+{% endblock %}
+ 
+
+{% block body %}
+    <center><h3>Listado Empresa</h3></center> 
+
+        {% if error == 0  %}
+        Registro borrado satisfactoriamente
+    {% elseif error == 9 %}
+   Registro actualizado satisfactoriamente
+      {% elseif error == 6 %}
+   Registro Insertado satisfactoriamente
+     {% elseif error == 5 %}
+      El email no es correcto
+    {%  else %}
+         Se ha produccido un error al eliminar el registro y no se ha podido eliminar
+   {% endif %}
+    
+  <div class="table-responsive" id="mydatatable-container">
+    <table class="records_list table table-striped table-bordered table-hover" id="mydatatable">
+        <thead>
+            <tr>
+              
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Sector</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for empresa in empresas %}
+            <tr>
+                <td>{{ empresa.Nombre }}</td>
+                <td>{{ empresa.Telefono }}</td>
+                <td>{{ empresa.Email }}</td>
+                <td>{{ empresa.Sector }}</td>
+                <td>
+                    <a class="boton_crear"href="{{ path('empresa_borrar', {'id': empresa.id}) }}"> <span class="boton_borrar" style="text-size:10px;">x</span></a>
+                    <a class="boton_crear" href="{{ path('empresa_editar', {'id': empresa.id}) }}"> <span class="boton_editar" style="text-size:10px;">Editar</span></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr >
+                <td colspan="6">No se han enontrado empresas</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <center><a class="boton_crear" href="{{ path('empresa_nueva') }}">Nueva Empresa</a> <a class="boton_crear" href="{{ path('inicio') }}">Volver</a></center>
+</div>
+{% endblock %}

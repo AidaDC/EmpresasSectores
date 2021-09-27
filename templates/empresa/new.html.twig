@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Empresa Nueva{% endblock %}
+
+{% block body %}
+    <h1>Nueva Empresa</h1>
+<div class="container">
+    {{ include('empresa/_form.html.twig') }}
+    
+    
+
+    <a class= 'boton_borrar' href="{{ path('empresas') }}">back to list</a>
+    </div>
+{% endblock %}

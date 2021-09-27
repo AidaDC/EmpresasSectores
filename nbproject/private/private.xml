@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/templates/sector/show.html.twig</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/templates/sector/_delete_form.html.twig</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/src/Form/EmpresaType.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/vendor/symfony/security-http/Authentication/AuthenticationUtils.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/src/Repository/SectorRepository.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/src/Entity/Empresa.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/src/Repository/SecurityRepository.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/templates/empresa/index.html.twig</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/src/Controller/EmpresaController.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/vendor/symfony/security-http/Authenticator/Passport/Badge/UserBadge.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/config/routes.yaml</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/templates/sector/_form.html.twig</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/src/Repository/EmpresaRepository.php</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/templates/security/login.html.twig</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/public/css/estilos.css</file>
+            <file>file:/Users/aida/.bitnami/stackman/machines/xampp/volumes/root/htdocs/pruebaNivel/templates/base.html.twig</file>
+        </group>
+    </open-files>
+</project-private>
